@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import { Chatbot } from 'supersimpledev';
 import LoadingGif from '../assets/loading-spinner.gif'
-import './ChatInput.css';
+// import './ChatInput.css';
 export function ChatIput({chatMessage,setChatMessage}){
     const [inputText,setInputText] = useState('')
     function saveInputText(event){
         setInputText(event.target.value);
 
+    }
+
+    function clear(){
+        setChatMessage([])
     }
     
 
@@ -101,6 +105,7 @@ export function ChatIput({chatMessage,setChatMessage}){
             className="input"
             />
             <button className="send-button" onClick={sentMessage}> Send </button>
+            <button className='clear-button' onClick={clear}> Clear </button>
         </div>
         </>
     )

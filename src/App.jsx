@@ -1,25 +1,45 @@
-import { useState } from 'react'
-import { ChatIput } from './components/ChatInput'
-import { ChatMessages } from './components/ChatMessages'
-import './App.css'
-
-      
-
-
-////////////////////////  CUSTOM HOOKS 
-
-
-
-
+import {  useEffect, useState } from 'react';
+import { ChatIput } from './components/ChatInput';
+import { ChatMessages } from './components/ChatMessages';
+import './App.css';
+import { chatbot } from 'supersimpledev';
+import dayjs from 'dayjs';
 
 function App(){
-      const [chatMessage,setChatMessage] = useState([
-        ])
+      const [chatMessage,setChatMessage] = useState(
+        JSON.parse(localStorage.getItem('message'))||
+        [{
+          Message: 'hello',
+          sender: 'user',
+          id: 'id1',
+          time: 'dd'
+        }]
+      );
         
       // const [chatMessage,setChatMessage] = array;
       // const chatMessage = array[0];
       // const setChatMessage = array[1];
-  
+
+      
+      useEffect(()=> {
+        if(chatMessage){
+          localStorage.setItem('message',JSON.stringify(chatMessage));
+          JSON.parse(localStorage.getItem('message'))
+       }
+        console.log(1);
+        
+      },[chatMessage])
+
+      const day = dayjs().valueOf()
+      const time = dayjs(day).format('H:mm a')
+      useEffect(() => {
+        chatbot.addResponses({
+          name: 'Robot',
+          date: time,
+        })
+      },[time])
+      
+      
   return(
     <div className="app-container">
 

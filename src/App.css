@@ -14,6 +14,15 @@
         font-size: 15px;
         cursor: pointer;
       }
+      .clear-button{
+        margin-left: 10px;
+        border-style: none;
+        padding: 12px 20px;
+        border-radius: 10px;
+        color: white;
+        background-color: rgb(247, 58, 58);
+        font-size: 15px;
+        cursor: pointer;}
       .input{
         flex-grow: 1;
         width: 475px;
@@ -52,6 +61,8 @@
       }
       .chat-Message-profile{
         width: 45px;
+        border-radius: 45px;
+        object-fit: cover;
       }
       .chat-Message-container{
         flex-grow: 1;
@@ -65,4 +76,17 @@
       .loading{
         height: 40px;
         margin: -15px;
+      }
+      .red{
+        text-align: end;
+        font-size: 10px;
+        
+        margin-left: 10px;
+        border-style: none;
+        padding: 12px 20px;
+        border-radius: 10px;
+        color: white;
+        background-color: grey;
+        font-size: 15px;
+        cursor: pointer;
       }

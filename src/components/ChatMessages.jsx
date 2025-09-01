@@ -1,6 +1,6 @@
 import { useAutoScroll } from "./useAutoScroll";
 import { ChatMessage } from './ChatMessage';
-import './ChatMessages'
+import './ChatMessages.css'
 export function ChatMessages({chatMessage}){
       const chatMessageRef = useAutoScroll([chatMessage]);
 
