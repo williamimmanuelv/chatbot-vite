@@ -1,6 +1,6 @@
 import RobotImage from '../assets/robot.png'
 // import UserImage from '../assets/user.png'
-import UserProfile from '../assets/profile-1.jpg'
+import UserProfile from '../assets/profile-1.png'
 import dayjs from 'dayjs';
 
 import './ChatMessage.css'
