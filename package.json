@@ -9,10 +9,14 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "mktest": "mkdir test",
-    "rmtest": "rmdir test"
+    "rmtest": "rmdir test",
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "dayjs": "^1.11.18",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "supersimpledev": "^8.6.4"

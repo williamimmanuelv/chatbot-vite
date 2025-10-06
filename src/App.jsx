@@ -11,8 +11,7 @@ function App(){
         [{
           Message: 'hello',
           sender: 'user',
-          id: 'id1',
-          time: 'dd'
+          id: 'id1' 
         }]
       );
         
@@ -35,7 +34,7 @@ function App(){
       useEffect(() => {
         chatbot.addResponses({
           name: 'Robot',
-          date: time,
+          time: time,
         })
       },[time])
       
